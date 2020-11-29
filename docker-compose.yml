@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+
+  fastapi:
+    build: .
+    ports:
+      - 8848:8000
