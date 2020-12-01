@@ -295,7 +295,7 @@ class Receipt:
                 box = index_to_box[value_index]
                 box.extract_flag = True
                 pre_extracted.append(box)
-                content = re.sub(".*[" + "][".join(key_) + "]", "", box.text)
+                content = re.sub(".*[" + "][".join(key_) + "][：:]?", "", box.text)
             if self._check_multiple_lines(key_):
                 content += self._get_legal_multiple_lines(anchor, key_, pre_extracted)
             info = {key_: content}
